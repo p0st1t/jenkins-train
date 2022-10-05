@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build & SonarQube analysis') {
             steps {
-             withSonarQubeEnv('My SonarQube Server') {
+             withSonarQubeEnv('sonarqube') {
                 sh 'mvn sonar:sonar -X -Dsonar.host.url=http://172.17.0.2:9000/'
                 }
             }
