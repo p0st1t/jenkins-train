@@ -17,7 +17,7 @@ pipeline {
         }
         stage('sonar') {
             steps {
-                sh 'mvn sonar:sonar -X'
+                sh 'mvn sonar:sonar -X -Dsonar.host.url=172.17.0.2:9000/sonar'
             }
         }
     }
