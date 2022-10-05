@@ -17,6 +17,7 @@ pipeline {
         }
         stage('sonar') {
             steps {
+                sh 'wget 172.17.0.2:9000 && cat index.html'
                 sh 'mvn sonar:sonar -X'
             }
         }
