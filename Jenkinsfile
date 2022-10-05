@@ -17,7 +17,7 @@ pipeline {
         }
         stage('sonar') {
             steps {
-                sh 'pwd'
+                sh 'mvn sonar:sonar'
             }
         }
     }
