@@ -1,4 +1,4 @@
-FROM sonarqube:latest
+FROM alpine:latest
 
 RUN apk add git
 RUN apk add maven
